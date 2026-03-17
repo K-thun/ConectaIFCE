@@ -1,50 +1,63 @@
-import { FolderSearch, Trophy, Users } from "lucide-react"
-import { Card, CardContent } from "../ui/card"
+import { FolderSearch, Trophy, Users } from "lucide-react";
+import { Card, CardContent } from "../ui/card";
 
 const features = [
 	{
-	icon: Users,
-	title: 'Faça parte da rede',
-	description:
-	"Conecte-se com colegas de cursp, professores e técnicos do IFCE. Amplie sua rede de contatos acadêmicos."
+		icon: Users,
+		title: "Faça parte da rede",
+		description:
+			"Conecte-se com colegas de curso, professores e técnicos do IFCE. Amplie sua rede de contatos acadêmicos.",
 	},
 	{
-	icon: FolderSearch,
-	title: "Encontre parceiros",
-	description:"Descubra pessoas com interesses semelhantes para formar grupes de estudo e desenvolver projetos juntos."
-	}
+		icon: FolderSearch,
+		title: "Encontre parceiros",
+		description:
+			"Descubra pessoas com interesses semelhantes para formar grupes de estudo e desenvolver projetos juntos.",
+	},
 	{
-	icon: Trophy,
-	title: "Compartilhe conquistas",
-	description: "Celebre suas realizações acadêmicas, certificações e prêmios com toda a comunidade institucional."
-	}
-]
+		icon: Trophy,
+		title: "Compartilhe conquistas",
+		description:
+			"Celebre suas realizações acadêmicas, certificações e prêmios com toda a comunidade institucional.",
+	},
+];
 
 function FeatureSection() {
-  return (
-	 <section className="bg-background py-20">
-		<div className="container-main">
-		<div className="mx-auto text-center max-w-2x1">
-			<p className="text-primary uppercase">
-				Por que participar
-			</p>
-			<h2 className="mt-3 text-4x1 font-bold text-balance text-foreground tracking-tight">
-				Tudo que você precisa para crescer na vida acadêmica
-			</h2>
-			<p className="mt-4 text-balance text-lg text-muted-foreground">
-				Networking e recrsos para impulsionar sua jornada no IFCE.
-			</p>
-		</div>
-		<div className="grid grid-cols-4 gap-6">
-			<Card>
-				<CardContent>
-
-				</CardContent>
-			</Card>
-		</div>
-		</div>
-	 </section>
-  )
+	return (
+		<section className="bg-background py-20">
+			<div className="container-main">
+				<div className="mx-auto text-center max-w-2x1">
+					<p className="text-primary uppercase">Por que participar</p>
+					<h2 className="mt-3 text-4x1 font-bold text-balance text-foreground tracking-tight">
+						Tudo que você precisa para crescer na vida acadêmica
+					</h2>
+					<p className="mt-4 text-balance text-lg text-muted-foreground">
+						Networking e recrsos para impulsionar sua jornada no IFCE.
+					</p>
+				</div>
+				<div className="mt-16 grid grid-cols-4 gap-6">
+					{features.map((feature) => (
+						<Card
+							key={feature.title}
+							className="border-border bg-card hover:border-primary/30 hover:shadow-md transition-all duration-200"
+						>
+							<CardContent className="flex flex-col px-6">
+								<div className="flex items-center justify-center size-10 bg-primary/10 rounded-lg">
+									<feature.icon className="size-5 text-primary" />
+									<h3 className="text-lg mt-4 font-semibold text-foreground">
+										{feature.title}
+									</h3>
+									<p className="mt-2 text-muted-foreground text-sm text-balance leading-relaxed">
+										{feature.description}
+									</p>
+								</div>
+							</CardContent>
+						</Card>
+					))}
+				</div>
+			</div>
+		</section>
+	);
 }
 
-export default FeatureSection
+export default FeatureSection;

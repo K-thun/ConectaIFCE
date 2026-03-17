@@ -18,7 +18,7 @@ function HeroSection() {
 				</h1>
 				<p className="mt-6 text-muted-foreground text-xl text-balance">
 					A plataforma que une alunos, professores e técnicos para
-					compartilhar projetos,formar grupos de estudo e celebrar
+					compartilhar projetos, formar grupos de estudo e celebrar
 					conquistas acadêmicas.
 				</p>
 				<Button className="mt-10" size="lg" asChild>
