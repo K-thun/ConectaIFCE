@@ -1,6 +1,6 @@
 import NavBar from "@/components/shared/navbar";
-import HomePage from "@/pages/HomePage";
 import Footer from "@/components/shared/footer";
+import { Outlet } from "react-router";
 
 function App() {
 	return (
@@ -8,7 +8,7 @@ function App() {
 			<div className="flex flex-col min-h-svh">
 				<NavBar />
 				<main className="flex-1 flex flex-col">
-					<HomePage />
+					<Outlet />
 				</main>
 				<Footer />
 			</div>

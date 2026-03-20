@@ -24,7 +24,7 @@ const features = [
 
 function FeatureSection() {
 	return (
-		<section className="bg-background py-20">
+		<section className="bg-background py-20" id="feature-section">
 			<div className="container-main">
 				<div className="mx-auto text-center max-w-2x1">
 					<p className="text-primary uppercase">Por que participar</p>
