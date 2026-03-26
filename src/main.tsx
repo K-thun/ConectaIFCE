@@ -5,7 +5,7 @@ import App from "./App.tsx";
 import RegisterPage from "./pages/RegisterPage.tsx";
 import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
-import HomePage from "@/pages/HomePage.tsx";
+import HomePage from "@/pages/homepage/HomePage";
 import Loginpage from "@/pages/LoginPage.tsx";
 
 const router = createBrowserRouter([

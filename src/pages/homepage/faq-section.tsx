@@ -3,7 +3,7 @@ import {
 	AccordionContent,
 	AccordionItem,
 	AccordionTrigger,
-} from "../ui/accordion";
+} from "@/shared/components/ui/accordion";
 
 const faq = [
 	{
@@ -45,11 +45,10 @@ function FaqSection() {
 						Perguntas Frequentes
 					</h2>
 				</div>
-
-				<Accordion type="single" collapsible className="w-full mt-16">
+				<Accordion type="single" className="w-full mt-16">
 					{faq.map((item) => (
-						<AccordionItem key={item.question} value={item.question}>
-							<AccordionTrigger className="text-base font-medium text-foreground hover:text-primary">
+						<AccordionItem key={item.question} value="item.question">
+							<AccordionTrigger className="text-base font-medium text-foreground houver:text-primary">
 								{item.question}
 							</AccordionTrigger>
 							<AccordionContent className="text-sm leading-relaxed text-muted-foreground">

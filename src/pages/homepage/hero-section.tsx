@@ -1,4 +1,4 @@
-import { Button } from "@base-ui/react";
+import { Button } from "@/shared/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { Link } from "react-router";
 
