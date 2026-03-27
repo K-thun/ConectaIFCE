@@ -1,7 +1,7 @@
 import { http } from "@/infra/http/http-client";
 
 import type { UserResponseDTO } from "@/features/auth/types/dto/AuthDTO";
-import { clearAccessToken, setAccessToken } from "../storage/token.storage";
+import { clearAccessToken, setAccessToken } from "../storages/token.storage";
 
 export async function login(
 	email: string,

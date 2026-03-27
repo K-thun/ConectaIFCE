@@ -3,7 +3,7 @@ import type {
 	UserRequestDTO,
 	UserResponseDTO,
 } from "@/features/auth/types/dto/AuthDTO";
-import { setAccessToken } from "../storage/token.storage";
+import { setAccessToken } from "../storages/token.storage";
 
 type CampusType = {
 	id: string;

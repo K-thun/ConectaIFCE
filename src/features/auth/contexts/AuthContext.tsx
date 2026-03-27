@@ -1,11 +1,12 @@
-import { createContext, useContext, useState, type ReactNode } from "react";
 import {
 	celarStoredUser,
 	getStoredUser,
 	setStoredUser,
-} from "../storage/authUser.storage";
-import type { AuthUser } from "../types/dto/AuthDTO";
+} from "@/features/auth/storages/authUser.storage";
+import type { AuthUser } from "@/features/auth/types/dto/AuthDTO";
+import { createContext, useContext, useState, type ReactNode } from "react";
 
+// context type
 type AuthContextType = {
 	isAuthenticated: boolean;
 	authUser: AuthUser | null;
@@ -13,8 +14,10 @@ type AuthContextType = {
 	clearAuthUser: () => void;
 };
 
+// create context
 const AuthContext = createContext<AuthContextType | null>(null);
 
+// context provider
 export function AuthProvider({ children }: { children: ReactNode }) {
 	const [authUser, setAuthUser] = useState<AuthUser | null>(() =>
 		getStoredUser(),
